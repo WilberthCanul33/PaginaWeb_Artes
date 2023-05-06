@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    background-color: wheat;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Cinzel' serif;
+}
+
+header {
+    background-color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+nav a, .logo {
+      color: black;
+      text-decoration: none;
+      transition: 0.1s;
+  }
+  
+nav a:hover{
+      border-bottom: 3px solid black;
+  }
+  
+a:hover {
+      opacity: 0.7;
+  }
+  
+.logo {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      cursor: default;
+  }
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+    background-color: whitesmoke;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    top: 0;
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: black;
+    margin: 8px;
+}
+
+
+.principal {
+    width: 100%;
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+}
+
+.principal picture {
+    width: 100%;
+    height: 93vh;
+
+    position: absolute;
+    background-image: url("img/portada.jpg");
+
+    /*Parallax*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.principal .cristal_principal {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter:blur(5px);
+    -webkit-backdrop-filter:blur(50px);
+
+}
+
+.principal h1{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    margin: 0px 50px ;
+    font-size: 70px;
+    color:#B2A074;
+    text-align: center;
+}
+
+.destacado {
+    text-align: center;
+    padding-top: 3em;
+    font-weight: bold;
+}
+
+.cita{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url("img/portada_dos.jpg");
+
+    /*parallax*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.cita div{
+    width: 70%;
+    padding: 50px 0px;
+}
+
+.cita p{
+    width:50%;
+    position: relative;
+    font-size: 3.6em;
+    width:70%;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+
+}
+
+.productos{
+    width:80%;
+    height:auto;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 150px 0px;
+    flex-wrap: wrap;
+}
+
+.productos .contenedor_productos{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    flex: 1 1 200px;
+    margin-left: 50px ;
+}
+.productos picture img{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 5px;
+    margin-top:15px;
+}
+
+.productos h3{
+    width: 100%;
+    padding:0px;
+    font-family: 'Cinzel', serif;
+    font-size:  40px;
+    width: 300px;
+    color: black;
+}
+
+.productos .linea{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 120px;
+    height: 2px;
+    margin-right: 50%;
+    background-color: #B2A074;
+
+}
+.productos p{
+    width: 300px;
+    font-size:17px;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    border-top: 1px solid #ccc;
+    padding: 5px 0;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Flamenco', cursive;
+}
+
+footer p{
+    margin-bottom: 5px;
+}
+
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgdos{
+    width: 90px;
+    height: 90px;
+}
+
+.imgtres{
+    width: 70px;
+    height: 70px;
+}
+
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(-45deg) translate(-5px, -7px);
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav {
+        height: 100%;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        font-size: 1.1em;
+        width: 50vw;
+        background-color: whitesmoke;
+        height: 92vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+        color: black;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .principal .cristal_principal {
+        margin: auto;
+        width: 90%;
+        background: rgba(255, 255, 255, 0.75);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        backdrop-filter:blur(5px);
+        -webkit-backdrop-filter:blur(50px);
+    
+    }
+
+}
+
+@media (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .productos{
+        height: auto;
+        margin-bottom: 50px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .cita p{
+        font-size: 30px;
+    }
+    .cita div{
+        padding:50px 0px;
+    }
+
+    .productos .contenedor_productos{
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .destacado {
+        font-size: 1.6em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
