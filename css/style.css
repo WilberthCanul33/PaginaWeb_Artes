@@ -104,7 +104,7 @@ nav {
     height: 93vh;
 
     position: absolute;
-    background-image: url("img/portada.jpg");
+    background-image: url("../img/portada.jpg");
 
     /*Parallax*/
     background-attachment: fixed;
@@ -146,7 +146,7 @@ nav {
     justify-content: center;
     align-items: center;
     height: 90vh;
-    background-image: url("img/portada_dos.jpg");
+    background-image: url("../img/portada_dos.jpg");
 
     /*parallax*/
     background-attachment: fixed;
